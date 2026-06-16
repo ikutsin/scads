@@ -88,7 +88,20 @@ module bottom() {
 color("yellow")
 //translate([30,0,-0])
 translate([-27/2,-13,-28])
+difference() {
 cube([27, tubelen+5, 5]);
+
+cnt = 8;
+w = 1;
+gap = (tubelen - cnt*w) / (cnt -1);
+
+for (i = [0:cnt-1])
+{
+    translate([-tubelen, i*(w + gap)+3,0])
+    rotate([0,90,0])
+    cylinder(tubelen*2, w,w); 
+}
+}
 }
 
 bottom();
