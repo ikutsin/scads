@@ -1,3 +1,4 @@
+$fn=400;
 tubelen = 45;
 toprad = 45;
 btmrad = 10;
@@ -103,9 +104,9 @@ for (i = [0:cnt-1])
 }
 }
 }
-
+translate([0,-2,0])
 bottom();
-rotate([2,0,0]) {
+rotate([-2,0,0]) {
 bottomcolumn();
 tubes();
 }
